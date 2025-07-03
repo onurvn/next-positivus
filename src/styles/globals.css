@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme {
+  --color-custom-white: #ffffff;
+  --color-custom-green: #b9ff66;
+  --color-custom-grey: #f3f3f3;
+  --color-custom-dark: #191a23;
+
+  --breakpoint-mediumDesktop: 1600px;
+  --breakpoint-ultraDesktop: 2000px;
+  --breakpoint-ultraLargDesktop: 3000px;
+}
+
+html,
+body {
+  max-width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+  font-family: "Space Grotesk", sans-serif;
+}
+
+#border-path {
+  animation: draw 1s forwards 1s ease-out;
+}
+
+.vector_black {
+  width: 100%;
+  background-image: url("/public/assets/images/vector_dark.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
